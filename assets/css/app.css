@@ -1,0 +1,24 @@
+body { background-color: #f8fafc; }
+.navbar-brand i { color: #ffc107; }
+.card { box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,.05); }
+.table thead th { white-space: nowrap; }
+.badge-status { font-size: .9rem; }
+
+/* NiceAdmin-like layout (sidebar only) */
+.na-layout { display: flex; }
+.na-sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 250px; overflow-y: auto; background: #0d6efd; }
+.na-sidebar .nav-link { padding: .5rem 1rem; opacity: .9; }
+.na-sidebar .nav-link:hover, .na-sidebar .nav-link.active { background: rgba(255,255,255,.15); opacity: 1; }
+.na-main { margin-left: 0; width: 100%; min-height: 100vh; }
+
+@media (min-width: 992px) {
+  .na-main { margin-left: 250px; }
+}
+
+/**** mobile toggle ****/
+.na-sidebar { transform: translateX(-100%); transition: transform .2s ease-in-out; }
+.na-sidebar-open .na-sidebar { transform: translateX(0); }
+@media (min-width: 992px) {
+  .na-sidebar { transform: none; }
+  .na-sidebar-open .na-sidebar { transform: none; }
+}
